@@ -1,0 +1,56 @@
+<div  ng-controller="searchCtrl">
+<div class="title1">
+	<a href="#/home" class="scan">
+		<img src="../images/return.png">
+	</a>
+	<div class="strong">
+		<input type="text" placeholder="请输入商品名称" ng-model="data"/>
+		<span class="search-img"></span>
+	</div>
+	<a class="search" ng-click="dataclick()">搜索</a>
+</div>
+<div class="search-hot" ng-show="bol">
+	<!--热门搜索-->
+<div class="hot-search">
+	<h4>热门搜索</h4>
+	<div class="hot-goods">
+		<a href="">大闸蟹</a><a href="">水</a><a href="">中秋月饼</a><a href="">酸奶</a><a href="">啤酒</a><a href="">西瓜</a><a href="">大荔冬枣</a><a href="">贝儿蛋糕</a><a href="">月盛斋</a>
+	</div>
+</div>
+<!--历史记录-->
+<div class="history">
+	<h4>历史记录</h4>
+	<a  ng-repeat="tex in searchdata">{{tex}}</a>
+</div>
+<span class="clear-his" ng-click="removedata()" style="margin-bottom:1.5rem">清空历史</span>
+</div>
+<!--点击搜索后显示的页面-->
+<div class="search-click" ng-hide="bol">
+	<!--没有搜到商品的提示-->
+	<div class="search-lose">
+		<div class="search-lose1">
+			暂时没搜到“<span>{{data1}}</span>”相关商品
+		</div>
+		<div class="search-lose2">
+			您可以更换其他关键词试试看
+		</div>
+	</div>
+	<h4>大家都在买</h4>
+	<ul class="pales">
+		<li class="oneal" ng-repeat="fruit in fruitData">
+		<a href="#" class="tu"><img ng-src="{{fruit.img}}"></a>
+			<div class="message">
+				<div class="good_name">{{fruit.name}}</div>
+				<div class="good_name"><span class="good_names">精选</span><span class="sale">{{fruit.pm_desc}}</span></div>
+				<div class="good_name">{{fruit.specifics}}</div>					
+				<div class="good_name" style="color:red;">￥{{fruit.price}} <s style="color:#ccc;">￥{{fruit.market_price}}</s></div>
+			</div>
+			<span class="circle">+</span>
+		</li>
+	</ul>
+	<span class="no-more">无更多商品</span>
+	<div class="shopping-cart">
+		<a href=""><img src="../images/shopping-cart.png"/></a>
+</div>
+</div>
+</div>

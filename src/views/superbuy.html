@@ -1,0 +1,90 @@
+<div ng-controller="superbuyCtrl" style="margin-bottom:1.5rem">
+	<div class="title2">
+		<a href="#/home" class="scan">
+			<img src="../images/return.png">
+		</a>
+		<strong>疯狂秒杀</strong>
+		<a href="" class="search">
+			<img src="../images/fresh.jpg">
+		</a>
+	</div>
+	<div class="pic">
+		<img src="../images/super-buy.jpg"/>
+	</div>
+	<div class="buy_time">
+		<a href="">
+			<div class="buy-stage">
+				10:00
+			</div>
+			<div class="buy-current">
+				已结束
+			</div>
+			<div class="buy-down">
+				<img src="../images/down.png"/>
+			</div>
+		</a>
+		<a href="">
+			<div class="buy-stage">
+				12:00
+			</div>
+			<div class="buy-current">
+				已结束
+			</div>
+			<div class="buy-down">
+				<img src="../images/down.png"/>
+			</div>
+		</a>
+		<a href="">
+			<div class="buy-stage">
+				15:00
+			</div>
+			<div class="buy-current">
+				已结束
+			</div>
+			<div class="buy-down">
+				<img src="../images/down.png"/>
+			</div>
+		</a>
+		<a href="">
+			<div class="buy-stage">
+				19:00
+			</div>
+			<div class="buy-current">
+				已结束
+			</div>
+			<div class="buy-down">
+				<img src="../images/down.png"/>
+			</div>
+		</a>
+	</div>
+	<div class="buy-remain-time">
+		<div>
+			<span class="count-text">距离本场结束</span>
+			<span class="count-time">{{supertime()}}</span>
+		</div>
+		<div>
+			<a style="color:#fff;font-size: 0.4rem;">查看活动规则</a>
+		</div>
+	</div>
+	<div class="goods-show" ng-repeat="datas in seckilData">
+		<a href="" class="img">
+			<img ng-src="{{datas.img}}"/>
+		</a>
+		<div class="goods-mes">
+			<div class="goods-title">{{datas.name}}</div>
+			<div class="goods-standard">
+				{{datas.specifics}}
+			</div>
+			<div class="goods-price">
+				<span class="yuan">￥{{datas.price}}</span>
+				<span class="price-old">原价：{{datas.market_price}}</span>
+			</div>
+			<a href="" ng-click="addcart(datas)"
+			ng-class="supercolor(datas)" class="goods-buy">{{datas.btnText}}</a>
+		</div>
+	</div>
+	<div class="shopping-cart">
+		<a href="#/cart"><img src="../images/shopping-cart.png"/></a>
+	</div>
+</div>
+	

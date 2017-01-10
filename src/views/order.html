@@ -1,0 +1,26 @@
+<div class="title" ng-controller="orderCtrl">
+	<strong>新鲜预定</strong>
+	<div class="titlenav">
+		<span ng-repeat="data in sortData1" ng-class="bordercolor($index)" ng-click="sortclick($index)">{{data}}</span>
+	</div>
+	<h2 class="h2">{{title}}</h2>
+	<div>
+		<div class="commodity bgcolor" ng-repeat="shop in ordermarketdata">
+			<img src={{shop.img}}/>
+			<div class="good commodity-good">
+				<h4>{{shop.name}}</h4>
+	 	 	 	<p class="good-p1"><b>精选</b><span>{{shop.pm_desc}}</span></p>
+				<p class="specifics">{{shop.specifics}}</p>
+				<p class="price"><span>￥		{shop.price}</span>
+					<s>￥{{shop.market_price}}</s>
+				</p>
+			</div>
+			<div class="btn">
+				<p class="btns">
+			<button ng-click="removecart(shop)" ng-show="counts(shop.id)"> - </button>
+			<span ng-show="counts(shop.id)">{{counts(shop.id)}}</span>
+		<button ng-click="addcart(shop)">+</button>
+	 	 	 </div>
+	 </div>
+	</div>
+</div>

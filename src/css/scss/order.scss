@@ -1,0 +1,19 @@
+.titlenav{
+	margin: 1.5rem 0 0.3rem;
+	span{
+		display: inline-block;
+		line-height: 1.2rem;
+		border-bottom: 0.1rem solid #fff;
+		width: 20%;
+		text-align: center;
+		background: #fff;
+	}
+	.borderblock{
+		border-bottom: 0.1rem solid #000;
+	}
+}
+.h2{
+	line-height: 0.8rem;
+	font-size: 0.5rem;
+	text-indent:1em
+}

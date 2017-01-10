@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="axf">
+	<head>
+		<meta charset="UTF-8">
+		<title>爱鲜蜂</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-route.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/libs.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div ng-view></div>
+<!--页脚工具栏-->
+		<footer class="felex bgcolor" ng-controller="footCtrl">
+				<a href="#/home" class="feled" ng-click="imgclick(0)">
+					<img ng-src="{{imgsrc(0)}}"/>
+					<p>首页</p>
+				</a>
+				<a href="#/supermarket" class="feled" ng-click="imgclick(1)">
+					<img ng-src="{{imgsrc(1)}}"/>
+					<p>闪送超市</p>
+				</a>
+				<a href="#/order" class="feled" ng-click="imgclick(2)">
+					<img ng-src="{{imgsrc(2)}}"/>
+					<p>新鲜预定</p>
+				</a>
+				<a href="#/cart" class="feled" ng-click="imgclick(3)">
+					<img ng-src="{{imgsrc(3)}}"/>
+					<p>购物车</p>
+				</a>
+				<a href="#/mine" class="feled" ng-click="imgclick(4)">
+					<img ng-src="{{imgsrc(4)}}"/>
+					<p>我的</p>
+				</a>
+		</footer>
+<!--页脚工具栏结束-->
+	</body>
+</html>

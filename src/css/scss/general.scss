@@ -1,0 +1,42 @@
+@charset "UTF-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 10vw;
+}
+body{
+	font-size: 0.4rem;
+	background: #eee;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+	color:#000;
+}
+ul{
+	list-style: none;
+}
+#warp{
+	padding-bottom:1.5rem ;
+	padding-top: 1.5rem;
+}
+.felex{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.feled{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.bgcolor{
+	background: #fff;
+}
+.margin{
+	margin: 0.5rem 0;
+	width: 100%;
+}

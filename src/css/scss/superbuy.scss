@@ -1,0 +1,144 @@
+.pic{
+	margin-top:1.5rem ;
+	height:4.5rem;
+	width: 100%;
+	img{
+		width: 100%;
+	}
+}
+.buy_time{
+	width: 100%;
+	height:2rem;
+	display: flex;
+	justify-content: space-between;
+	a{
+		width: 24.5%;
+		display: flex;
+	/*	justify-content: center;*/
+		flex-wrap: wrap;
+		align-items: center;
+		border:1px solid;
+		box-sizing: border-box;
+		text-align: center;
+		background: #272c2a;
+		color:#fff;
+		div{
+			width: 100%;
+		}
+		.buy-down{
+			width: 68%;
+		}
+	}
+}
+.buy-down{
+	overflow: hidden;
+	img{
+		width:100%;
+	}
+}
+.buy-remain-time{
+	width: 100%;
+	height:1.5rem;
+	margin-top: 0.1rem;
+	div{
+		span{
+			display: block;
+			height:50%;
+			width: 100%;
+			text-align: center;
+			line-height: 0.8rem;
+		}
+	}
+	div:nth-child(1){
+		background: #fdd000;
+		width: 40%;
+		height:100% ;
+		float:left;
+		font-size: 0.4rem;
+		
+	}
+	div:nth-child(2){
+		background: #272c2a;
+		float: right;
+		margin-right: 10%;
+		margin-top: 3%;
+		width: 35%;
+		height:0.9rem;
+		line-height: 0.9rem;
+		text-align: center;
+		border-radius: 0.3rem;
+	}
+}
+.shopping-cart{
+	width: 1.8rem;
+	height:1.8rem;
+	background: #fdd000;
+	border-radius: 100%;
+	position: fixed;
+	right:1rem;
+	bottom:1.5rem;
+	a{
+		display: inline-block;
+		width: 100%;
+		height:100%;
+		img{
+			width: 100%;
+		}
+	}
+}
+.goods-show{
+	margin-top: 0.2rem;
+	width: 100%;
+	height:4.5rem;
+	border:1px solid;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-around;
+	background: #fff;
+}
+.img{
+	width: 49%;
+	height:100%;
+	margin:4% auto;
+	img{
+		width: 80%;
+	}
+}
+.goods-mes{
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	width: 49%;
+	div{
+		line-height: 1rem;
+		font-size: 0.5rem;
+		margin-left: 0.4rem;
+	}
+}
+.goods-title{
+	text-overflow: ellipsis;
+  white-space: pre;
+  overflow: hidden;
+}
+.goods-price .yuan{
+	color:#ff602c;
+	font-weight: bold;
+}
+.price-old{
+	color:#b9b9b9;
+}
+.goods-buy{
+	width: 80%;
+	height:1rem;
+	border-radius: 0.5rem;
+	text-align: center;
+	line-height: 1rem;
+	padding:0.1rem 0.2rem;
+	font-size: 0.5rem;
+	color:#fff;
+}
+.supercolorccc{
+	background: #ccc;
+}
+.supercolorred{
+	background: red;
+}

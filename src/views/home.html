@@ -1,0 +1,134 @@
+		<div id="warp" ng-controller="homeCtrl">
+<!--头部-->
+			<header class="felex">
+				<a href="#" class="feled">
+					<img src="images/scan.jpg"/>
+					<p>扫一扫</p>
+				</a>
+				<b>查看当前位置▼</b>
+				<a href="#/search"  class="feled">
+					<img src="images/index_search.png"/>
+					<p>搜索</p>
+				</a>
+			</header>
+<!--头部结束-->
+<!--轮播-->
+			<div class="swiper-container swiper-container-horizontal swiper-first">
+				<div class="swiper-wrapper">
+				<!--<img class="swiper-slide" ng-repeat="imgs in lunboimgData"  ng-src="{{imgs.activity.img}}"/>-->
+				<img class="swiper-slide" ng-repeat="imgs in lunboimgData"  ng-src="{{imgs}}"/>
+				<!--alt={{imgs.activity.img}}-->
+				</div>
+				<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+    		</div>
+			</div>
+<!--轮播结束-->
+<!--中部导航-->
+	<div class="feled nav bgcolor">
+		<a href="" class="feled">
+			<img src="images/2016081918454835.png"/>
+			<p>抽奖</p>
+		</a>
+		<a href="#/superbuy" class="feled">
+			<img src="images/2016092318431928.jpg"/>
+			<p>疯狂秒杀</p>
+		</a>
+		<a href="" class="feled">
+			<img src="images/2016090709430633.png"/>
+			<p>鲜货直供</p>
+		</a>
+		<a href="" class="feled">
+			<img src="images/2016092219201794.png"/>
+			<p>大闸蟹</p>
+		</a>
+		<a href="" class="feled">
+			<img src="images/2016081918472555.png"/>
+			<p>水果</p>
+		</a>
+		<a href="" class="feled">
+			<img src="images/2016081918472974.png"/>
+			<p>乳品</p>
+		</a>
+		<a href="" class="feled">
+			<img src="images/201608191853564.png"/>
+			<p>卤味</p>
+		</a>
+		<a href="" class="feled">
+			<img src="images/2016081918473439.png"/>
+			<p>零食</p>
+		</a>
+	</div>
+<!--中部导航结束-->
+<!--头条-->
+	<div class="felex hot">
+		<img src="images/headline.jpg"/> 
+		<div class="swiper-container swiper-container-vertical swiper-second">
+			 <div class="swiper-wrapper">
+			 	 <div class="swiper-slide swiper-slide-active"><span>防霾</span>3M防霾口罩22.8元/3只 1小时闪送</div>
+            <div class="swiper-slide swiper-slide-next"><span>剁手</span>淘宝双十一，你不剁手谁剁手</div>
+            <div class="swiper-slide" ><span>买买买</span>不倾国不倾城，只让你倾家荡产</div>
+			 </div>
+		</div>
+	</div>
+<!--头条结束-->
+<!--热卖-->
+	<div class="felex sale-big">
+		<img src="images/sale1.jpg"/>
+		<img src="images/sale2.jpg"/>
+		<img src="images/sale3.jpg"/>
+	</div>		
+	<div class="feled sale-small margin">
+		<img src="images/sales1.jpg"/>
+		<img src="images/sales2.jpg"/>
+		<img src="images/sales3.jpg"/>
+		<img src="images/sales4.jpg"/>
+	</div>
+<!--热卖结束-->
+<!--精选-->
+	<div class="good-fruit bgcolor">
+		<h2 class="felex">
+			<span>优选水果</span>
+			<span>更多>></span>
+		</h2>
+		<img src="images/good-fruit.jpg" class="margin"/>
+		<div class="felex">
+	 	 	 <div class="good"  ng-repeat="data in hotdata">
+	 	 	 	<img ng-src="{{data.img}}"/>
+	 	 	 	<h4>{{data.name}}</h4>
+	 	 	 	<p class="good-p1"><b>精选</b><span>{{data.pm_desc}}</span></p>
+				<p class="specifics">{{data.specifics}}</p>
+				<p class="price"><span>￥{{data.price}}</span>
+			<s>￥{{data.market_price}}</s>
+		</p>
+		<p class="btns">
+			<button ng-click="removecart(data)" ng-show="counts(data.id)"> - </button>
+			<span ng-show="counts(data.id)">{{counts(data.id)}}</span>
+		<button ng-click="addcart(data)">+</button>
+		</p>
+	 	 	 </div>
+		 </div>
+		</p>
+	</div>
+<!--精选结束-->
+<!--商品-->
+<div class="main feled margin">
+	<div class="reserve bgcolor" ng-repeat="res in reservedatas">
+					<img src={{res.img}}/>
+		 	 	 	<h4>{{res.name}}</h4>
+		 	 	 	<p class="good-p1"><b>精选</b><span>{{res.pm_desc}}</span></p>
+					<p class="specifics">{{res.specifics}}</p>
+					<p class="price">
+						<span>￥{{res.price}}</span>
+						<s>￥{{res.market_price}}</s>
+					</p>
+					<p class="btns">
+			<button ng-click="removecart(res)" ng-show="counts(res.id)"> - </button>
+			<span ng-show="counts(res.id)">{{counts(res.id)}}</span>
+		<button ng-click="addcart(res)">+</button>
+		</p>
+	 	 	 </div>
+		 </div>
+	</div>
+</div>
+<!--商品结束-->
+		</div>

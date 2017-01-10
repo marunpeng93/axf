@@ -1,0 +1,43 @@
+<div ng-controller="shopcarCtrl">
+	<div class="title">
+			<strong>购物车</strong>
+		</div>
+		<div class="empty" ng-hide="shopdata.length">
+			<img src="images/empty.png"/>
+			<p>亲，购物车空空的耶。。。</p>
+			<a href="">去逛逛</a>
+	</div>
+	<div class="cart-main" ng-show="shopdata.length">
+	<div class="cart-user">
+		<p><span>收  货  人</span><span>王先生</span></p>
+		<p><span>电  &nbsp;    话</span><span>18700000000</span><span>修改 ></span></p>		
+		<p><span>收货地址</span><span>北京市</span></p>
+	</div>
+	<div class="cart-h bgcolor">
+		<p><span></span>闪送超市</p>
+		<p>￥0起送，22:00前满￥30减免运费，22:00后满￥69减免运费</p>
+	</div>
+	<p class="cart-p"><span>收货时间</span><span>一小时送达</span><span>可预订 ></span></p>
+	<p class="cart-input">收货备注 <input type="text" name="" id="" value="" /></p>
+	<div class="cart-shop">
+		<div class="cart-shopping felex" ng-repeat="data in shopdata ">
+			<p class="span"><span ng-class="buycolor(data)" ng-click="buy(data)">√</span></p>
+			<img ng-src='{{data.img}}'/>
+			<p class="data-name"><span>{{data.name}}</span>
+				￥{{data.price}}
+			</p>
+			<p class="btns">
+			<button ng-click="removecart(data)" ng-show="data.count"> - </button>
+			<span ng-show="data.count">{{counts(data.id)}}</span>
+		<button ng-click="addcart(data)">+</button>
+		</p>
+		</div>
+		<div class="cart-total felex">
+			<p class="span span1"><span ng-class="quanxuan()" ng-click="quanxuanbuy()">√</span>&nbsp;全选</p>
+			<p>共计: <span>￥{{total()}}</span></p>
+			<p ng-class="buycolortotal()">选好了</p>
+		</div>
+	</div>
+	</div>
+</div>
+		

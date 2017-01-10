@@ -1,0 +1,45 @@
+@-webkit-keyframes orientationa{
+  from{opacity:1}
+  to{opacity:0}
+}
+@-moz-keyframes orientationa{
+  from{opacity:1}
+  to{opacity:0}
+}
+@-ms-keyframes orientationa{
+  from{opacity:1}
+  to{opacity:0}
+}
+@-o-keyframes orientationa{
+  from{opacity:1}
+  to{opacity:0}
+}
+#welcom{
+	position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffd600;
+  z-index: 1001;
+  overflow: hidden;
+  div{
+    font-size: 0.5rem;
+    padding-top: 30%;
+    text-align: center
+  }
+  img{
+    display: block;
+  }
+  img:nth-child(1){
+    width:70%;
+    margin: 0 auto 1rem;
+  }
+  img:nth-child(2){
+    width:2rem;
+    margin:0 auto;
+    animation: orientationa 1.5s ease-in-out infinite ;
+  }
+  span{
+    font-size: 1rem;  
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,111 @@
+@charset "UTF-8";
+.head{
+	width: 100%;
+	height: 5rem;
+	background: #f3c800;
+	padding-top: 1rem;
+	box-sizing: border-box;top: 0;
+	position: fixed;
+	
+}
+.user_name{
+	color:#fff;
+	font-size: 0.5rem;
+	font-weight: bold;
+}
+.user_level{
+	display: block;
+	background: url("../images/main-level.png") no-repeat;
+	background-size: 100% 100%;
+	line-height: 1rem;
+	text-indent: 0.8rem;
+	font-size: 0.35rem;
+	font-weight: bold;
+	color:#FF6600
+}
+.main_info{
+	img:first-child{
+		height: 2rem;
+		margin-left: 1rem;
+	}
+	img:last-child{
+		margin-left: 2rem ;
+		margin-right: 0.6rem;
+	}
+}
+.mine_menu{
+	position: absolute;
+	bottom: 0;
+	line-height: 1rem;
+	width: 100%;
+	a{
+	    color: white;
+	    text-align: center;
+	    width: 50%;
+	    text-align: center;
+	    display:block;
+	    box-sizing: border-box;
+	    border: 1px solid;
+	    float: left;
+	    img{
+	    	vertical-align: middle;
+	    }
+	}
+}
+.my_order{
+	margin-top: 5.2rem;
+	margin-bottom: 1px;
+	display: block;
+	font-size: 0.4rem;
+	text-indent: 1.5rem;
+	line-height: 1rem;
+}
+/*我的订单*/
+.my_order{
+	margin-top: 5.2rem;
+	margin-bottom: 1px;
+	display: block;
+	font-size: 0.4rem;
+	text-indent: 1.5rem;
+	line-height: 1rem;
+	span{
+		float: right;
+		color:#ccc;
+		font-size: 0.37rem;
+		margin-right: 1rem;
+	}
+}
+/*my-operation*/
+.my-operation{
+	padding: 0.5rem 1rem;
+	a{
+		width: 18%;
+		font-size: 0.3rem;
+	}
+	img{
+		width: 50%;
+	}
+}
+/*my-function*/
+.my-function{
+	a{
+		width:20% ;
+		font-size: 0.35rem;
+		margin: 0 0.2rem;
+	}
+	div{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 0.5rem;
+		margin: 1px 0;
+	}
+	img{
+		width: 80%;
+	}
+}
+.step-back{
+	line-height: 1rem;
+	margin:0.5rem 0 1.5rem;
+	padding: 0.3rem 1rem;
+}
